@@ -1,17 +1,13 @@
 import React from 'react';
 
-function Article({article, addToCartHandler, quantityInCart = 0}) {
+function Article({article, children}) {
   return (
     <div className="article">
       <h3>
         {article.name} 
-        {quantityInCart > 0 && `(${quantityInCart})`}
       </h3>
-      <button 
-        onClick={() => addToCartHandler(article)}
-      >
-        Add to cart
-      </button>
+      
+      {children}
     </div>
   );
 }
