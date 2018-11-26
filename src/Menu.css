@@ -1,0 +1,38 @@
+.menu
+{
+  border-bottom: 1px solid #ccc;
+}
+
+.menu ul
+{
+  display: flex;
+  list-style:none;
+  padding: 0;
+}
+
+.menu ul li
+{
+  margin: 0 5px;
+}
+
+.menu ul li:not(:last-child):after 
+{
+  content: ' |';
+  margin-left: 5px;
+}
+
+.menu ul li a
+{
+  color: #000;
+  text-decoration: none;
+}
+
+.menu ul li a:not(.selected):hover
+{
+  text-decoration: underline;
+}
+
+.menu ul li a.selected
+{
+  font-weight:bold;
+}
